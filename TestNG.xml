@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI testing Suite" >
+    <listeners>
+        <listener class-name="utils.listeners.TestListener"/>
+        <listener class-name="utils.listeners.AnnotationTransformer"/>
+    </listeners>
+    <test name="ProdTest">
+        <classes>
+            <class name="tests.ProdTests"/>
+            <class name="tests.CartTests"/>
+
+
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,14 @@
+[INFO ] 2022-10-24 19:57:42.011 [main] Log - I am in onStart method ProdTest
+[INFO ] 2022-10-24 19:58:02.065 [main] Log - testProd test is starting.
+[INFO ] 2022-10-24 19:58:08.812 [main] Log - testProd test is succeed.
+[INFO ] 2022-10-24 19:58:09.481 [main] Log - testProd test is failed.
+[INFO ] 2022-10-24 19:58:09.679 [main] Log - I am in onFinish method ProdTest
+[INFO ] 2022-10-24 20:03:38.970 [main] Log - I am in onStart method ProdTest
+[INFO ] 2022-10-24 20:03:54.407 [main] Log - testProd test is starting.
+[INFO ] 2022-10-24 20:04:15.238 [main] Log - testProd test is succeed.
+[INFO ] 2022-10-24 20:04:15.813 [main] Log - testProd test is failed.
+[INFO ] 2022-10-24 20:04:16.074 [main] Log - I am in onFinish method ProdTest
+[INFO ] 2022-10-24 20:20:06.642 [main] Log - I am in onStart method ProdTest
+[INFO ] 2022-10-24 20:20:50.741 [main] Log - testProd test is starting.
+[INFO ] 2022-10-24 20:27:10.159 [main] Log - testProd test is failed.
+[INFO ] 2022-10-24 20:28:19.396 [main] Log - I am in onFinish method ProdTest
