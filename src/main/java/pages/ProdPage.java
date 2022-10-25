@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class ProdPage extends BasePage {
   private   By searchBox = By.id("search_product");
   private   By searchBtn = By.id("submit_search");
-  private  By addToCartBtn=By.xpath("(//a[@data-product-id=\"1\"])[2]");
+  private  By addToCartBtn=By.xpath("(//a[@data-product-id=\"1\"])[1]");
 
   private By viewCartLink=By.xpath("(//a[@href=\"/view_cart\"])[2]");
 

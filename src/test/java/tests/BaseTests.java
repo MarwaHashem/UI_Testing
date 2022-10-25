@@ -7,9 +7,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
+import utils.logs.Log;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,21 +17,14 @@ import static fileReaderManager.ReadFromFiles.getPropertyByKey;
 import static fileReaderManager.ReadFromFiles.url;
 
 public class BaseTests {
-   public static String configPropertyFileName =  "configData.properties" ;
+    public static String configPropertyFileName =  "configData.properties" ;
     public static String prodDetailsJsonFileName =  "prodDetails.json" ;
     public static String cartDetailsJsonFileName =  "cartDetails.json" ;
-    protected WebDriver driver;
-
+    public WebDriver driver;
 
     public WebDriver getDriver() {
         return driver;
     }
-
-@BeforeTest
-public void getPropertiesData(){
-    getPropertyByKey( configPropertyFileName,"App_url");
-
-}
 
 
 
@@ -42,10 +34,15 @@ public void getPropertiesData(){
     {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
         driver.get(url);
+        Log.info("Tests is starting!");
 
     }
+@BeforeTest
+        public void getPropertiesData() {
+            getPropertyByKey(configPropertyFileName, "App_url");
+        }
+
 
 
 
@@ -61,9 +58,12 @@ public void getPropertiesData(){
             }
         }
     }
+
+
     @AfterMethod
     public void z_quitDriver(){
-        driver.quit();
+     Log.info("Tests are ending!");
+       driver.quit();
     }
 
 

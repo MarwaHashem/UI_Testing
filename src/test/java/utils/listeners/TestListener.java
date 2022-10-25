@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import pages.BasePage;
 import tests.BaseTests;
 import utils.extentreports.ExtentManager;
 import utils.logs.Log;

@@ -7,6 +7,7 @@ public class CartPage extends BasePage{
 
 
 private By cartTable= By.id("empty_cart");
+
 private By quantCount=By.className("disabled");
     public CartPage(WebDriver driver) {  super(driver);  }
 
