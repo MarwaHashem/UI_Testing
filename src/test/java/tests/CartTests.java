@@ -10,15 +10,15 @@ import pages.ShoppingCartPage;
 import static fileReaderManager.ReadFromFiles.getJsonValueByKey;
 
 public class CartTests extends BaseTests{
-    String value1= getJsonValueByKey(cartDetailsJsonFileName, "cartTableMenu");
-    String value2= (getJsonValueByKey(cartDetailsJsonFileName, "noOfQuant"));
+    String descCartMenuFromJson= getJsonValueByKey(cartDetailsJsonFileName, "cartTableMenu");
+    String noOfQuantFromJson= (getJsonValueByKey(cartDetailsJsonFileName, "noOfQuant"));
 
     @Test
             public void testCart() {
         NavigationBarPage navigationBarPage = new NavigationBarPage(driver);
         CartPage cartPage = navigationBarPage.clickOnCartBtn();
         cartPage.getCartTable();
-        Assert.assertTrue(cartPage.getCartTable().contains(value1));
+        Assert.assertTrue(cartPage.getCartTable().contains(descCartMenuFromJson));
     }
     @Test
       public void testCart_2() {
@@ -27,7 +27,7 @@ public class CartTests extends BaseTests{
          prodPage.scrolToAllSearch();
          prodPage.clickToAddToCart();
          ShoppingCartPage shoppingCartPage= prodPage.clickToViewCart();
-         Assert.assertEquals( shoppingCartPage.getNoOfQuantCart(),value2);
+         Assert.assertEquals( shoppingCartPage.getNoOfQuantCart(),noOfQuantFromJson);
     }
 
 }

@@ -10,8 +10,8 @@ import static fileReaderManager.ReadFromFiles.getJsonValueByKey;
 
 public class ProdTests extends BaseTests{
 
-  String value1= getJsonValueByKey(prodDetailsJsonFileName, "productName");
-   int value2= Integer.parseInt(getJsonValueByKey(prodDetailsJsonFileName, "noOfProd"));
+  String searchTextFromJson= getJsonValueByKey(prodDetailsJsonFileName, "productName");
+   int noOfProdFromJson= Integer.parseInt(getJsonValueByKey(prodDetailsJsonFileName, "noOfProd"));
 
 
 
@@ -22,10 +22,10 @@ public class ProdTests extends BaseTests{
 
 
         ProdPage prodPage = new ProdPage(driver);
-        ProdSearchPage prodSearchPage = prodPage.searchprod(value1);
+        ProdSearchPage prodSearchPage = prodPage.searchprod(searchTextFromJson);
         prodSearchPage.scrolToAllSearch();
         for(int i=0;i<=2;i++) {
-            Assert.assertTrue(prodSearchPage.getTextList(i).contains(value1));
+            Assert.assertTrue(prodSearchPage.getTextList(i).contains(searchTextFromJson));
 
         }
     }
@@ -34,8 +34,8 @@ public class ProdTests extends BaseTests{
     @Test
     public void testProd_2(){
         ProdPage prodPage = new ProdPage(driver);
-        ProdSearchPage prodSearchPage = prodPage.searchprodByEnter(value1);
-        Assert.assertTrue(prodSearchPage.getTextList(value2).contains(value1));
+        ProdSearchPage prodSearchPage = prodPage.searchprodByEnter(searchTextFromJson);
+        Assert.assertTrue(prodSearchPage.getTextList(noOfProdFromJson).contains(searchTextFromJson));
 
 
     }

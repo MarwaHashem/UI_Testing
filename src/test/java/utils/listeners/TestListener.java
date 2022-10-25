@@ -10,7 +10,6 @@ import org.testng.ITestResult;
 import tests.BaseTests;
 import utils.extentreports.ExtentManager;
 import utils.logs.Log;
-
 import java.util.Objects;
 import static utils.extentreports.ExtentTestManager.getTest;
 
